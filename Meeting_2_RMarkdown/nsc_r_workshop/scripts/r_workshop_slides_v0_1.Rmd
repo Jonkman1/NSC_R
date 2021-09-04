@@ -1,0 +1,104 @@
+---
+title: "NSC-R Workshop"
+subtitle: Literate programming with RMarkdown
+author: "Asier Moneva"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  ioslides_presentation:
+    incremental: yes
+bibliography: references.bib
+---
+
+## Contents
+
+-   Why RMarkdown (*Rmd*)?
+-   What can you do with Rmd?
+-   Getting started
+-   The basics
+
+## Why Rmd?
+
+-   Free
+-   Open
+-   Reproducible
+-   Reliable
+
+## What can you do with Rmd? {.columns-2 .build}
+
+```{r book, echo = FALSE, message = FALSE}
+library(here)
+library(knitr)
+```
+
+```{r, echo = FALSE, out.width = "70%"}
+include_graphics(path = here("scripts", "xie_2021_book.png"))
+```
+
+-   Documents
+
+    -   Books
+    -   Journal articles
+    -   Reports
+
+-   Presentations (like this one!)
+-   Other stuff
+
+    -   Websites
+    -   Dashboards
+
+## Some examples {.build}
+
+-   Load R packages
+
+```{r packages, echo = TRUE, message = FALSE}
+library(crimedata)
+library(plotly)
+library(tidyverse)
+```
+
+-   Load crime data from the [Crime Open Database (CODE)](https://osf.io/zyaqn/) [@ashby2018]
+
+```{r data, echo = TRUE, results = 'hide', cache = TRUE, message = FALSE}
+crime_data <- get_crime_data()
+```
+
+## Some examples {.build}
+
+-   Query the data with `dplyr` [@wickham2020]
+
+```{r table, echo = TRUE}
+crime_data %>% 
+  filter(city_name == "Austin" & offense_against == "property") %>% 
+  group_by(offense_group) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(count)) %>% 
+  slice_head(n = 3)
+```
+
+## Some examples {.build}
+
+-   Plot the data with `ggplot2` [@wickham2016]
+
+```{r histogram, echo = TRUE, fig.dim = c(8, 3)}
+fig <- crime_data %>% 
+  filter(city_name == "Austin" & offense_against == "property") %>%
+  ggplot(mapping = aes(x = date_single, fill = offense_group)) +
+  geom_histogram(bins = 52)
+print(fig)
+```
+
+## Some examples {.build}
+
+Or make it interactive with `plotly` [@sievert2020]
+
+```{r interactive, echo = TRUE, fig.dim = c(8, 4)}
+ggplotly(fig)
+```
+
+## References
+
+::: {#refs}
+:::
+
+# Back to RStudio!

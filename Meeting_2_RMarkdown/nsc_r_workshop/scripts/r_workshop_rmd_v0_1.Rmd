@@ -1,0 +1,230 @@
+---
+title: "NSC-R Workshop"
+author: "Asier Moneva"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  bookdown::word_document2:
+    reference_docx: word_template_v0_1.docx
+    toc: yes
+    number_sections: no
+  html_document:
+    toc: yes
+    number_sections: yes
+  word_document:
+    reference_docx: word_template_v0_1.docx
+    toc: yes
+    number_sections: no
+  bookdown::html_document2:
+    toc: yes
+    number_sections: yes
+  bookdown::pdf_document2:
+    toc: no
+    number_sections: no
+  pdf_document:
+    toc: no
+    number_sections: no
+subtitle: "Literate programming with RMarkdown"
+bibliography: references.bib
+---
+
+# The Basics
+
+## Markdown syntax
+
+> Help \> RMarkdown Quick Reference
+
+    How can I format my text?
+
+1.  This is an
+2.  ordered list
+
+-   This is an unordered list.
+
+    -   And this is its sublist.
+
+-   For emphasis:
+
+    -   *This* is italic and *this* too.
+    -   **This** is bold and **this** too.
+
+-   Special formats:
+
+    -   ^This^ is superscript.
+    -   ~This~ is subscript.
+    -   ~~This~~ is strikethrough.
+    -   `This` is inline code.
+
+-   [This](http://nscr.nl) is hyperlinked text.
+
+-   And this [^1].
+
+You can also add math expressions, such as:
+
+$$y = X\beta + \epsilon$$
+
+Want to run a spell-check in the document? Press `F7`.
+
+## Compile your document
+
+Most used output formats:
+
+-   `html_document`
+-   `pdf_document`
+-   `word_document`
+
+How to customize the output format? See, for example, `?html_document`. For Word, you can use a template document. I named mine `word_template_v0_1.docx`. You can then specify you are using a template in the YAML with the parameter `reference_docx`. Check out [this](https://rmarkdown.rstudio.com/articles_docx.html) blog post by @layton2015 for a step-by-step tutorial.
+
+Advanced formats with the `bookdown` package [@xie2017]:
+
+-   `html_document2`
+-   `pdf_document2`
+-   `word_document2`
+
+Why? Cross-referencing.
+
+## Chunks and their parts
+
+Use this first chunk to configure your global options and chunk options. Then keep a *lineal*, *organized* workflow. Remember to name your chunks for organization and quick access!
+
+```{r setup}
+# Global options
+options(scipen = 999)
+
+# Chunk options: eval, echo, results, collapse, warning, message, error, include, cache, fig.width, fig.height, fig.dim, out.width, out.height, fig.align, dev, fig.cap, child
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here you can *load* your `packages`. To import crime data, I will use the `crimedata` R package by @ashby2018 that connects to the Crime Open Database.
+
+```{r packages, message = FALSE}
+# Check if you have already installed this package. If not, install it
+if (!requireNamespace("crimedata"))
+  install.packages("crimedata")
+# Then load it
+library(crimedata)
+
+if (!requireNamespace("here"))
+  install.packages("here")
+library(here)
+
+if (!requireNamespace("kableExtra"))
+  install.packages("kableExtra")
+library(kableExtra)
+
+if (!requireNamespace("knitr"))
+  install.packages("knitr")
+library(knitr)
+
+if (!requireNamespace("tidyverse"))
+  install.packages("tidyverse")
+library(tidyverse)
+```
+
+And here you can *import* your data.
+
+```{r import, results = 'hide', cache = TRUE, message = FALSE}
+crime_data <- get_crime_data()
+```
+
+Then, you can *transform* your data to, for example, identify the top three property crime groups in Austin in 2019.
+
+```{r transform}
+crime_table <- crime_data %>% 
+  filter(city_name == "Austin" & offense_against == "property") %>% 
+  group_by(offense_group) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(count)) %>% 
+  slice_head(n = 3)
+```
+
+In addition, you can display this information in a nice table using the `kableExtra` package. Table \@ref(tab:table1) shows that `r crime_table %>% slice_head(n = 1) %>% pull(offense_group)` is the most frequent offense group against property, with `r crime_table[1, 2]` records.
+
+```{r table1, echo = FALSE}
+kable(
+  x = crime_table,
+  col.names = c("Offense group", "Count"),
+  caption = "Top three property crime groups in Austin in 2019",
+  booktabs = TRUE
+)
+```
+
+Now you may want to *visualize* the data to provide additional context and facilitate interpretation. Figure \@ref(fig:figure1) ranks property offense groups by number of registries.
+
+```{r figure1, fig.cap = "Property crime registries by offense group", fig.height = 4}
+crime_figure <- crime_data %>% 
+  filter(city_name == "Austin" & offense_against == "property") %>% 
+  group_by(offense_group) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(count)) %>% 
+  ggplot(mapping = aes(
+    x = reorder(
+      x = offense_group,
+      X = count
+    ),
+    y = count
+  )) +
+  geom_col() +
+  scale_x_discrete(labels = function(x) str_wrap(
+    string = x, 
+    width = 30
+  )) +
+  coord_flip() +
+  labs(
+    x = "Offense group",
+    y = "Registries"
+  ) +
+  theme_classic()
+print(crime_figure)
+```
+
+And now imagine you want to insert a picture in your report. Let's include the NSCR logo as Figure \@ref(fig:picture).
+
+To indicate the `path` on which the picture is stored, we used the `here` package by @müller2020. To learn more, check out [this](https://malco.io/2018/11/05/why-should-i-use-the-here-package-when-i-m-already-using-projects/) blog post on *Why should I use the here package when I'm already using projects?*
+
+```{r picture, fig.align = "center", fig.cap = "Netherlands Institute for the Study of Crime and Law Enforcement logo", out.width = "25%"}
+include_graphics(path = here("scripts", "nscr_logo.jpg"))
+```
+
+## References with Zotero
+
+[This](https://blog.rstudio.com/2020/11/09/rstudio-1-4-preview-citations/) blog post by Joseph J. Allaire [-@allaire2020], creator of RStudio, details how to integrate citations from Zotero using RMarkdown.
+
+In addition to citing papers, you can also cite R packages like `rmarkdown` [@allaire2021]! To retrieve the citation information for a specific package, you can call `citation()` and specify the name of the R package using the `package` parameter.
+
+```{r citation}
+citation(package = "rmarkdown")
+```
+
+You can also format your references:
+
+-   Regular citation: [@allaire2021];
+-   In-text citation: @allaire2021 or just [-@allaire2021];
+-   Citation with prefixes or suffixes: [i.e., @allaire2021, p. 10]
+
+The reference list will automatically be compiled at the end of your document. But you can relocate it for your convenience using the following syntax.
+
+    :::{#refs}
+    :::
+
+# Templates
+
+> New file \> R Markdown \> From Template
+
+Learn more about the `rticles` package by @allaire2021a [here](https://github.com/rstudio/rticles)!
+
+# References
+
+::: {#refs}
+:::
+
+------------------------------------------------------------------------
+
+You can wrap up your script with `sessionInfo()`. This function retrieves information about your OS and helps you to keep track the software versions you used, which is useful to write *reproducible examples*.
+
+```{r session}
+sessionInfo()
+```
+
+[^1]: is a footnote
