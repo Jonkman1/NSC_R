@@ -15,5 +15,22 @@
     "preview": {},
     "last_modified": "2021-09-04T22:35:14+02:00",
     "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/2021-09-04-workshop1-reproducibility/",
+    "title": "Workshop1: Reproducibility",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Harrie Jonkman",
+        "url": "https://www.harriejonkman.nl"
+      }
+    ],
+    "date": "2021-09-04",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-04T22:46:09+02:00",
+    "input_file": "workshop1-reproducibility.knit.md"
   }
 ]
