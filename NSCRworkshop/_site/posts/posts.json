@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to NSCRWorkshops",
+    "description": "Welcome to our new blog, NSCRWorkshops. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Harrie Jonkman",
+        "url": "https://www.harriejonkman.nl"
+      }
+    ],
+    "date": "2021-09-04",
+    "categories": [],
+    "contents": "\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-04T22:35:14+02:00",
+    "input_file": "welcome.knit.md"
+  }
+]
