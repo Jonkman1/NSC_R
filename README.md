@@ -1,1 +1,1 @@
-# NSC_R
+This is the blog of the NSC_R workshop
