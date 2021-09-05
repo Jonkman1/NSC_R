@@ -86,38 +86,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>NSCRWorkshops: Workshop1: Reproducibility</title>
+<title>NSCRWorkshops: Workshop 2: RMarkdown</title>
 
-<meta property="description" itemprop="description" content="Here you find information on the first NSC-R workshop on **Reproducibility**"/>
+<meta property="description" itemprop="description" content="Introduction to literate programming using RMarkdown"/>
 
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-06-24"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-06-24"/>
-<meta name="article:author" content="Thomas de Graaf"/>
+<meta property="article:published" itemprop="datePublished" content="2021-07-06"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-07-06"/>
+<meta name="article:author" content="Asier Moneva"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="NSCRWorkshops: Workshop1: Reproducibility"/>
+<meta property="og:title" content="NSCRWorkshops: Workshop 2: RMarkdown"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Here you find information on the first NSC-R workshop on **Reproducibility**"/>
+<meta property="og:description" content="Introduction to literate programming using RMarkdown"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="NSCRWorkshops"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="NSCRWorkshops: Workshop1: Reproducibility"/>
-<meta property="twitter:description" content="Here you find information on the first NSC-R workshop on **Reproducibility**"/>
+<meta property="twitter:title" content="NSCRWorkshops: Workshop 2: RMarkdown"/>
+<meta property="twitter:description" content="Introduction to literate programming using RMarkdown"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Workshop1: Reproducibility"]},{"type":"character","attributes":{},"value":["Here you find information on the first NSC-R workshop on **Reproducibility**"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Thomas de Graaf"]},{"type":"character","attributes":{},"value":["https://research.vu.nl/en/persons/thomas-de-graaff"]}]}]},{"type":"character","attributes":{},"value":["June 24 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Workshop 2: RMarkdown"]},{"type":"character","attributes":{},"value":["Introduction to literate programming using RMarkdown"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Asier Moneva"]},{"type":"character","attributes":{},"value":["https://nscr.nl/en/medewerker/asier-moneva/"]}]}]},{"type":"character","attributes":{},"value":["July 6 2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Screenshot1.png","workshop1-reproducibility_files/anchor-4.2.2/anchor.min.js","workshop1-reproducibility_files/bowser-1.9.3/bowser.min.js","workshop1-reproducibility_files/distill-2.2.21/template.v2.js","workshop1-reproducibility_files/jquery-1.11.3/jquery.min.js","workshop1-reproducibility_files/popper-2.6.0/popper.min.js","workshop1-reproducibility_files/tippy-6.2.7/tippy-bundle.umd.min.js","workshop1-reproducibility_files/tippy-6.2.7/tippy-light-border.css","workshop1-reproducibility_files/tippy-6.2.7/tippy.css","workshop1-reproducibility_files/tippy-6.2.7/tippy.umd.min.js","workshop1-reproducibility_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["rmarkdown_files/anchor-4.2.2/anchor.min.js","rmarkdown_files/bowser-1.9.3/bowser.min.js","rmarkdown_files/distill-2.2.21/template.v2.js","rmarkdown_files/jquery-1.11.3/jquery.min.js","rmarkdown_files/popper-2.6.0/popper.min.js","rmarkdown_files/tippy-6.2.7/tippy-bundle.umd.min.js","rmarkdown_files/tippy-6.2.7/tippy-light-border.css","rmarkdown_files/tippy-6.2.7/tippy.css","rmarkdown_files/tippy-6.2.7/tippy.umd.min.js","rmarkdown_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2061,7 +2061,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Workshop1: Reproducibility","description":"Here you find information on the first NSC-R workshop on **Reproducibility**","authors":[{"author":"Thomas de Graaf","authorURL":"https://research.vu.nl/en/persons/thomas-de-graaff","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-24T00:00:00.000+00:00","citationText":"Graaf, 2021"}
+{"title":"Workshop 2: RMarkdown","description":"Introduction to literate programming using RMarkdown","authors":[{"author":"Asier Moneva","authorURL":"https://nscr.nl/en/medewerker/asier-moneva/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-07-06T00:00:00.000+00:00","citationText":"Moneva, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2084,30 +2084,28 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Workshop1: Reproducibility</h1>
+<h1>Workshop 2: RMarkdown</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Here you find information on the first NSC-R workshop on <strong>Reproducibility</strong></p></p>
+<p><p>Introduction to literate programming using RMarkdown</p></p>
 </div>
 
 <div class="d-byline">
-  Thomas de Graaf <a href="https://research.vu.nl/en/persons/thomas-de-graaff" class="uri">https://research.vu.nl/en/persons/thomas-de-graaff</a> 
+  Asier Moneva <a href="https://nscr.nl/en/medewerker/asier-moneva/" class="uri">https://nscr.nl/en/medewerker/asier-moneva/</a> 
   
-<br/>June 24 2021
+<br/>July 6 2021
 </div>
 
 <div class="d-article">
-<h2 id="workshop-1-reproducibilty">Workshop 1: Reproducibilty</h2>
-<p>On Thursday June 24, 13:00-14:00, we kicked off the NSC-R Workshop initiative. The topic of this first meeting was reproducibility, which is about how to organize your research workflow to create documented code and reproducible findings. The focus <strong>was not on why</strong> (we should know), but on practical guidelines <strong>on how to do it</strong>.</p>
-<p>It was presented by Thomas de Graaff, associate professor at the department of Spatial Economics at the VU.</p>
-<p>Here you find the <a href="https://github.com/Jonkman1/NSC_R/tree/main/Meeting_1_Reproducibility/reproducibility.pdf">presentation</a></p>
-<p>To prepare for the first meeting, Thomas de Graaff suggested you might want to take a look at the following links. This is obviously not mandatory, but the materials may give rise to ideas or questions that you may want to discuss in the workshop meeting:<br />
-- A very readable post on <a href="https://cyberhelp.sesync.org/blog/reproducible-r-workflow.html">reproducible workflow in R</a>.</p>
+<p><strong>Markdown</strong> is a language for producing formatted text with a simple text editor conceived with the idea of being human-readable from source. If you remember Thomas de Graaff’s talk from two weeks ago, having human readable code is important for a number of reasons, such as being easy to debug, maintain, and extend.</p>
+<p><strong>RMarkdown</strong> is simply a software that allows the implementation of this language in R. This makes it possible to produce open-access, fully reproducible documents.</p>
 <ul>
-<li><p>A nice short blog post <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">about R projects</a>.</p></li>
-<li><p>If you are using R already and in particular if you use tidyverse, a long book-down document from about [style] (<a href="https://style.tidyverse.org/index.html" class="uri">https://style.tidyverse.org/index.html</a>).</p></li>
-<li><p>A wonderful but distressing lecture (and long: about 50 minutes) from Richard McElreath about working with software in the social sciences, with a criminology paper example in the end on racial disparity in police use of deadly force.<a href="https://www.youtube.com/watch?v=zwRdO9_GGhY">find here</a>.</p></li>
+<li><p>To show you the basics, Asier followed the book <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a> by Xie, Allaire and Grolemund. He recommends you read the Preface before the workshop. However, as a definitive guide, you can deduce that this book does not only cover the basics, so you can also use it to go deeper.</p></li>
+<li><p>To have all the main commands at hand, you can print this double-sided <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown cheat sheet</a>. (We love cheat sheets.)</p></li>
+<li><p>And for a quick overview of RMarkdown, just watch <a href="https://vimeo.com/178485416">this video</a>.</p></li>
 </ul>
+<p>Here you find the <a href="https://github.com/Jonkman1/NSC_R/tree/main/Meeting_2_RMarkdown/nsc_r_workshop/scripts">presentation, scripts and additional materials</a>.</p>
+<p>Here you find am <a href="https://github.com/Jonkman1/NSC_R/tree/main/Meeting_2_RMarkdown/nsc_r_workshop/templates/elsevier">Elsevier template</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
