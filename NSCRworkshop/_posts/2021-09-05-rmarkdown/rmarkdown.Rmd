@@ -1,5 +1,5 @@
 ---
-title: "Workshop 2: RMarkdown"
+title: "RMarkdown"
 description: |
   Introduction to literate programming using RMarkdown
 author:

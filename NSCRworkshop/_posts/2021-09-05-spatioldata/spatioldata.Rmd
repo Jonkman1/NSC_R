@@ -1,5 +1,5 @@
 ---
-title: "Workshop 3: SpatialData"
+title: "Spatial Data"
 description: |
   A short description of the post.
 author:

@@ -1,11 +1,10 @@
 ---
 title: "Welcome to NSCRWorkshops"
 description: |
-  Welcome to our new blog, NSCRWorkshops. We hope you enjoy 
-  reading what we have to say!
+  Welcome to our new blog, NSCRWorkshops. We report from workshops which to place and alert you to workshops that are planned in the near future
 author:
-  - name: Harrie Jonkman 
-    url: https://www.harriejonkman.nl
+  - name: Wim Bernasco, Alex Trinidad, Asier Moneva and Sam Langton
+    url: https://nscr.nl
     affiliation: NSCR
 date: 09-04-2021
 output:
@@ -15,9 +14,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating blogs with Distill at:
-# https://rstudio.github.io/distill/blog.html
 
 ```
 

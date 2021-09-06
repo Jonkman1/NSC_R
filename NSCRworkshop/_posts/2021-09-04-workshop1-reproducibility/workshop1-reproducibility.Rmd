@@ -1,7 +1,7 @@
 ---
-title: "Workshop1: Reproducibility"
+title: "Reproducibility"
 description: |
-  Here you find information on the first NSC-R workshop on **Reproducibility**
+  Here you find information on the first NSC-R workshop on Reproducibility
 author:
   - name: Thomas de Graaf
     url: https://research.vu.nl/en/persons/thomas-de-graaff
@@ -16,9 +16,6 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
-
-## Workshop 1: Reproducibilty
 
 
 
