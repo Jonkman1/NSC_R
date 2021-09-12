@@ -2,18 +2,19 @@
 title: "Welcome to NSC-R workshops"
 description: |
   "Learning by sharing"
-preview: "images/workshop.png"
+preview: "https://github.com/Jonkman1/NSC_R/tree/main/NSCRworkshop/images/workshop.png"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
 ![](images/workshop.png){width=50%}
 
 ## What is the goal of NSC-R?
 
-NSC-R is an interdisciplinary community at NSCR dedicated to promoting a fun and supportive culture of co-learning in data science skills and open science principles. We host workshops and social events where attendees can learn and work on projects among friends and colleagues. NSC-R welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and code fear with inspiration and motivation to learn and share.
+NSC-Ris an interdisciplinary community at NSCR dedicated to promoting a fun and supportive culture of co-learning in data science skills and open science principles. We host workshops and social events where attendees can learn and work on projects among friends and colleagues. NSC-R welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and code fear with inspiration and motivation to learn and share.
 
 ## Contact Us and Get involved
 
