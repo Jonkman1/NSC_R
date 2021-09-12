@@ -1,0 +1,22 @@
+---
+title: "NSC_RWorkshops"
+author: "Harrie"
+date: "9/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## install and open package distill
+
+```{r}
+# install.packages("distill")
+library(distill)
+```
+
+```{r}
+distill::create_blog(dir = "NSCRworkshop", title = "NSCRWorkshops")
+```
+

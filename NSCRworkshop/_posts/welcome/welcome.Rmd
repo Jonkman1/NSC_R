@@ -6,7 +6,7 @@ author:
   - name: Wim Bernasco, Alex Trinidad, Asier Moneva and Sam Langton
     url: https://nscr.nl
     affiliation: NSCR
-    preview: logo_NSCR.svg
+    preview: images/logo_NSCR.svg
 date: June 6 2021
 output:
   distill::distill_article:
