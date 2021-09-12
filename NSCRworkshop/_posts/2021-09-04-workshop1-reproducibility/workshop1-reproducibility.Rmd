@@ -3,7 +3,7 @@ title: "Reproducibility"
 description: |
   Here you find information on the first NSC-R workshop on Reproducibility
 author:
-  - name: Thomas de Graaf
+  - name: Thomas de Graaff
     url: https://research.vu.nl/en/persons/thomas-de-graaff
 date: June 24 2021
 output:
@@ -16,12 +16,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+![](workshop01.png){width=50%}
 
-
-
-On Thursday June 24, 13:00-14:00, we kicked off the NSC-R Workshop initiative. The topic of this first meeting was reproducibility, which is about how to organize your research workflow to create documented code and reproducible findings. The focus **was not on why** (we should know), but on practical guidelines **on how to do it**. 
-
-It was presented by Thomas de Graaff, associate professor at the department of Spatial Economics at the VU.
+On Thursday June 24, 13:00-14:00, we kicked off the NSC-R Workshop initiative. The topic of this first meeting was reproducibility, which is about how to organize your research workflow to create documented code and reproducible findings. The focus **was not on why** (we should know), but on practical guidelines **on how to do it**. It was presented by Thomas de Graaff. 
 
 Here you find the [presentation](https://github.com/Jonkman1/NSC_R/tree/main/Meeting_1_Reproducibility/reproducibility.pdf)
 
@@ -33,3 +30,5 @@ To prepare for the first meeting, Thomas de Graaff suggested you might want to t
 - If you are using R already and in particular if you use tidyverse, a long book-down document from about [style] (https://style.tidyverse.org/index.html).    
  
 - A wonderful but distressing lecture (and long: about 50 minutes) from Richard McElreath about working with software in the social sciences, with a criminology paper example in the end on racial disparity in police use of deadly force.[find here](https://www.youtube.com/watch?v=zwRdO9_GGhY).
+
+> Thomas de Graaf is associate professor at the department of Spatial Economics at the Vrije Universiteit in Amsterdam.

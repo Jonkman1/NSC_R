@@ -3,17 +3,17 @@
     {
       "path": "about.html",
       "title": "Welcome to NSC-R workshops",
-      "description": "Learning by sharing",
+      "description": "\"Learning by sharing\"\n",
       "author": [],
-      "contents": "\nWhat is the goal of NSC-R?\nNSC-Ris an interdisciplinary community at NSCR dedicated to promoting a fun and supportive culture of co-learning in data science skills and open science principles. We host workshops and social events where attendees can learn and work on projects among friends and colleagues. NSC-R welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and code fear with inspiration and motivation to learn and share.\nContact Us and Get involved\nWhether you’re a beginner, intermediate, or expert, we want you to be involved with the NSC-R workshops. There are different ways to get involved\n1. Slack\nJoin the NSC-R slack workspace and be part of our co-learning community. Everyone is welcome. Ask Questions and team up with other members.\n2. Mailing List\nJoin the mailing list. If you have interest, please email to join.\n3. Suggest a Workshop\nWe’re all learners in NSC-R. Request a workshop, and if you are interested in helping teach it, we’ll support you!\nxxx\n\n\n\n",
-      "last_modified": "2021-09-06T17:28:50+02:00"
+      "contents": "\n\nWhat is the goal of NSC-R?\nNSC-R is an interdisciplinary community at NSCR dedicated to promoting a fun and supportive culture of co-learning in data science skills and open science principles. We host workshops and social events where attendees can learn and work on projects among friends and colleagues. NSC-R welcomes everyone who wants to better their know-how in all things data, regardless of skill level. We want to replace statistics anxiety and code fear with inspiration and motivation to learn and share.\nContact Us and Get involved\nWhether you’re a beginner, intermediate, or expert, we want you to be involved with the NSC-R workshops. There are different ways to get involved\n1. Slack\nJoin the NSC-R slack workspace and be part of our co-learning community. Everyone is welcome. Ask Questions and team up with other members.\n2. Mailing List\nJoin the mailing list. If you have interest, please email to join.\n3. Suggest a Workshop\nWe’re all learners in NSC-R. Request a workshop, and if you are interested in helping teach it, we’ll support you!\nxxx\n\n\n\n",
+      "last_modified": "2021-09-12T21:35:42+02:00"
     },
     {
       "path": "index.html",
       "title": "NSC-R Workshops",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-09-06T20:12:21+02:00"
+      "last_modified": "2021-09-12T21:33:19+02:00"
     }
   ],
   "collections": ["posts/posts.json"]
