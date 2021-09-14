@@ -16,7 +16,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(distill)
 ```
 
+## Making the blog NSCRWorkshops
 ```{r}
 distill::create_blog(dir = "NSCRworkshop", title = "NSCRWorkshops")
+```
+
+## Making the post, for example nr4. Open Data
+```{r}
+distill::create_post("OpenData")
 ```
 
