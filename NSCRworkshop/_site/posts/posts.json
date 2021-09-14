@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-09-14-opendata/",
+    "title": "OpenData",
+    "description": "Introduction to open data and how they can be found, downloaded and processed in R.",
+    "author": [
+      {
+        "name": "Sam Langton",
+        "url": "https://nscr.nl/medewerker/dr-alex-trinidad/"
+      }
+    ],
+    "date": "2021-09-14",
+    "categories": [],
+    "contents": "\n\nThis workshop session provides an introduction to open data using R. Following a brief introductory presentation (e.g. definitions, purpose) the bulk of the workshop will focus on practical examples which demonstrate how to obtain and handle open data within the R environment.\nNo prior reading is necessary, but if you might want to skim through a recent book chapter (in press) by Sam and Reka Solymosi on using open data in R to study the geography of crime.\nHere you can find his materials: Sams presentation (presentation.pdf), his syntax (demo.R) and the results of his syntax (worksheet.pdf)\n\nSam Langron is a postdoc researcher on the evidence-based policing programme at the NSCR. His research focuses on the spatial and temporal patterning of crime and police demand.\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-09-14T21:04:41+02:00",
+    "input_file": "opendata.knit.md"
+  },
+  {
     "path": "posts/2021-09-05-spatioldata/",
     "title": "Spatial Data",
     "description": "This is a workshop on learning how to work with spatial data.",
