@@ -1,11 +1,11 @@
 ---
 title: "OpenData"
 description: |
-  A short description of the post.
+  Introduction to open data and how they can be found, downloaded and processed in R. 
 author:
-  - name: Alex Trinidad
+  - name: Sam Langton
     url: https://nscr.nl/medewerker/dr-alex-trinidad/
-date: 09-14-2021
+date: September 14 2021
 output:
   distill::distill_article:
     self_contained: false
@@ -16,8 +16,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+![](workshop4.png){width=50%}
+This workshop session provides an introduction to **open data using R**. Following a brief introductory presentation (e.g. definitions, purpose) the bulk of the workshop will focus on practical examples which demonstrate how to obtain and handle open data within the R environment. 
+ 
+No prior reading is necessary, but if you might want to skim through a [recent book chapter](https://osf.io/a96y7/) (in press) by Sam and Reka Solymosi on using open data in R to study the geography of crime. 
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
 
+> Sam Langron is a postdoc researcher on the evidence-based policing programme at the NSCR. His research focuses on the spatial and temporal patterning of crime and police demand.
 
